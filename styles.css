@@ -187,7 +187,7 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.875rem 1.75rem;
+    padding: 0.875rem 2rem;
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 1rem;
@@ -196,6 +196,10 @@ a {
     transition: var(--transition-smooth);
     border: none;
     outline: none;
+    white-space: nowrap;
+    text-decoration: none;
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .btn-primary {
@@ -417,8 +421,12 @@ a {
 
 .hero-actions {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.25rem;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
 }
 
 .hero-scroll-indicator {
@@ -1026,21 +1034,29 @@ a {
    Responsive Design (Media Queries)
    ========================================================================== */
 @media (max-width: 992px) {
-    .hero-title { font-size: 3.5rem; }
+    .nav-links { display: none; }
+    .mobile-nav-toggle { display: block; }
+    .hero-title { font-size: 3.25rem; }
     .grid-2, .grid-3 { grid-template-columns: 1fr; }
     .about-image-container { margin-bottom: 2rem; }
     .job-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 }
 
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    .mobile-nav-toggle { display: block; }
-    .hero-title { font-size: 2.75rem; }
-    .hero-subtitle { font-size: 1.1rem; }
-    .hero-actions { flex-direction: column; width: 100%; }
-    .btn { width: 100%; }
+@media (max-width: 640px) {
+    .hero-title { font-size: 2.25rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .hero-actions { 
+        flex-direction: column; 
+        align-items: stretch;
+        width: 100%; 
+        gap: 1rem;
+    }
+    .hero-actions .btn { 
+        width: 100%; 
+        display: flex;
+    }
     .stats-grid { grid-template-columns: 1fr; }
     .timeline-tabs { flex-wrap: wrap; }
-    .timeline-content-wrapper { padding: 1.5rem; }
-    .resume-sheet { padding: 1.5rem; }
+    .timeline-content-wrapper { padding: 1.25rem; }
+    .resume-sheet { padding: 1.25rem; }
 }
