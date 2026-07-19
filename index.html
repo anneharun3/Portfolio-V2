@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Engineer | Staff Software Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Mr. Engineer, Staff Software Engineer specializing in high-performance distributed systems, scalable architectures, and tech leadership.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Canvas for Interactive System Node Particle System -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Global Radial Gradient Glow following the cursor -->
+    <div id="cursor-glow"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>Mr. Engineer<span class="logo-accent"> /&gt;</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#expertise" class="nav-link">Expertise</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="resume-btn" class="btn btn-secondary">View Resume</button>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <nav class="mobile-nav-links">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#expertise" class="mobile-link">Expertise</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <button id="mobile-resume-btn" class="btn btn-primary">View Resume</button>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content container">
+                <div class="badge fade-in">
+                    <span class="badge-dot"></span>
+                    Open to Senior / Staff Engineering Roles
+                </div>
+                <h1 class="hero-title fade-in delay-1">
+                    Engineering <span class="gradient-text">Scale</span>.<br>
+                    Demystifying Complexity.
+                </h1>
+                <p class="hero-subtitle fade-in delay-2">
+                    I am a <strong>Staff Software Engineer</strong> specializing in designing, building, and scaling high-performance distributed systems, cloud-native architectures, and robust developer platforms. 
+                </p>
+                <div class="hero-actions fade-in delay-3">
+                    <a href="#projects" class="btn btn-primary">Explore My Work</a>
+                    <a href="#contact" class="btn btn-outline">Let's Connect</a>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <a href="#about" aria-label="Scroll to About Section">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section container">
+            <div class="grid grid-2">
+                <div class="about-image-container reveal-left">
+                    <div class="image-wrapper">
+                        <img src="avatar.jpg" alt="Mr. Engineer Profile Picture" class="profile-image">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+                <div class="about-text reveal-right">
+                    <h2 class="section-title">My Philosophy</h2>
+                    <p class="section-lead">
+                        I believe in building software that doesn't just work today, but survives the scale of tomorrow. Good architecture is invisible, resilient, and empowers teams to move fast without breaking things.
+                    </p>
+                    <p>
+                        With over a decade of experience across global tech companies, I focus on distributed data consistency, low-latency microservices, infrastructure automation, and cultivating high-performance engineering cultures through active mentorship and technical leadership.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-num">10+</span>
+                            <span class="stat-label">Years of Experience</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">99.99%</span>
+                            <span class="stat-label">System Availability</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">50M+</span>
+                            <span class="stat-label">Daily Users Scaled</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="section section-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Areas of Expertise</h2>
+                    <p class="section-subtitle">Core capabilities forged through years of operating production systems at scale.</p>
+                </div>
+                <div class="grid grid-3">
+                    <!-- Card 1 -->
+                    <div class="card card-glow reveal-up">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="8" rx="2" />
+                                <rect x="2" y="14" width="20" height="8" rx="2" />
+                                <line x1="6" y1="6" x2="6.01" y2="6" stroke-linecap="round" />
+                                <line x1="6" y1="18" x2="6.01" y2="18" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <h3>Distributed Systems</h3>
+                        <p>Designing eventual consistency systems, distributed locks, queue mechanisms, and partition-tolerant architectures using Go, Rust, and Kafka.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card card-glow reveal-up delay-1">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Cloud & Infrastructure</h3>
+                        <p>Orchestrating robust infrastructure environments. Kubernetes, Docker, Terraform, AWS/GCP, and reliable CI/CD pipelines built for speed and security.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card card-glow reveal-up delay-2">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3>Technical Leadership</h3>
+                        <p>Leading cross-functional architectural reviews, mentoring senior and staff engineers, defining technology roadmaps, and driving engineering best practices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Professional Milestones</h2>
+                <p class="section-subtitle">A timeline of leading systems architecture and engineering organizations.</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-tabs">
+                    <button class="timeline-tab active" data-index="0">Staff Engineer</button>
+                    <button class="timeline-tab" data-index="1">Lead Architect</button>
+                    <button class="timeline-tab" data-index="2">Senior Engineer</button>
+                </div>
+
+                <div class="timeline-content-wrapper">
+                    <!-- Job 1 -->
+                    <div class="timeline-content active" id="job-0">
+                        <div class="job-header">
+                            <h3>Staff Software Engineer <span class="text-accent">@ GlobalScale Corp</span></h3>
+                            <span class="job-date">2022 - Present</span>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Championed architectural migration from monolithic backend to a Go-based gRPC microservices mesh, reducing API response times by 35% globally.</li>
+                            <li>Designed and delivered a real-time event ingestion engine processing over 120,000 requests/sec with 99.999% uptime, leveraging Apache Kafka and ClickHouse.</li>
+                            <li>Formulated company-wide RFC guidelines and chaired the Tech Review Committee, ensuring alignment of 80+ engineers across 12 product squads.</li>
+                            <li>Mentored 5 senior engineers into tech lead roles and established the internal Staff+ engineering forum to build cross-functional leadership.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="timeline-content" id="job-1">
+                        <div class="job-header">
+                            <h3>Lead Systems Architect <span class="text-accent">@ CloudFlow Labs</span></h3>
+                            <span class="job-date">2019 - 2022</span>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Architected and managed multi-tenant SaaS infrastructure hosting 4.5M monthly active users across AWS and GCP.</li>
+                            <li>Implemented Infrastructure as Code (IaC) templates using Terraform, saving over 20% in annual cloud hosting fees ($1.2M savings).</li>
+                            <li>Introduced robust distributed tracing (OpenTelemetry) and structured logging standards, reducing average Mean Time to Resolution (MTTR) by 50%.</li>
+                            <li>Led a 14-person infrastructure team overseeing orchestration and cluster management on EKS.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="timeline-content" id="job-2">
+                        <div class="job-header">
+                            <h3>Senior Backend Engineer <span class="text-accent">@ DataPulse Systems</span></h3>
+                            <span class="job-date">2016 - 2019</span>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Re-engineered core database access layer, implementing intelligent write-through caching mechanisms with Redis that slashed SQL read loads by 60%.</li>
+                            <li>Built complex transaction engines using Java/Spring Boot and PostgreSQL with strict ACID requirements.</li>
+                            <li>Coordinated with product owners to scope and design features, leading sprint plannings and retrospectives.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Selected Engineering Projects</h2>
+                    <p class="section-subtitle">Showcasing systems, libraries, and tools built to resolve extreme scaling constraints.</p>
+                </div>
+                <div class="grid grid-3">
+                    <!-- Project 1 -->
+                    <div class="project-card reveal-up">
+                        <div class="project-image-placeholder">
+                            <span class="project-tag">Distributed Systems</span>
+                            <div class="project-img-glow glow-blue"></div>
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 22L22 2M19.07 4.93l-2.12 2.12M7.05 16.95l-2.12 2.12"/>
+                            </svg>
+                        </div>
+                        <div class="project-body">
+                            <h4>Hyperion Engine</h4>
+                            <p>A high-performance Raft-based consensus protocol implementation in Rust, optimized for sub-millisecond distributed state synchronization.</p>
+                            <div class="project-tech">
+                                <span>Rust</span>
+                                <span>Raft</span>
+                                <span>gRPC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card reveal-up delay-1">
+                        <div class="project-image-placeholder">
+                            <span class="project-tag">Cloud Native</span>
+                            <div class="project-img-glow glow-indigo"></div>
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <div class="project-body">
+                            <h4>Aether Gateway</h4>
+                            <p>A cloud-native API gateway built on EnvProxy, featuring dynamic rate limiting, token bucket flow control, and autonomous routing config.</p>
+                            <div class="project-tech">
+                                <span>Go</span>
+                                <span>Kubernetes</span>
+                                <span>Envoy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card reveal-up delay-2">
+                        <div class="project-image-placeholder">
+                            <span class="project-tag">Infrastructure</span>
+                            <div class="project-img-glow glow-purple"></div>
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M21 12H3M12 3v18"/>
+                            </svg>
+                        </div>
+                        <div class="project-body">
+                            <h4>TerraForma Sync</h4>
+                            <p>An automated drift detection and state synchronization controller running inside Kubernetes, aligning state to Git definitions in real-time.</p>
+                            <div class="project-tech">
+                                <span>Go</span>
+                                <span>Terraform</span>
+                                <span>K8s Operator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section container">
+            <div class="grid grid-2">
+                <div class="contact-info reveal-left">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-lead">
+                        I am currently evaluating new staff-level opportunities, strategic advisory roles, and technical consulting partnerships.
+                    </p>
+                    <p>
+                        If you're solving challenging infrastructure issues, building a core systems team, or migrating architectures at scale, let's chat.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <a href="mailto:anneharun3@gmail.com">anneharun3@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🌐</span>
+                            <a href="https://github.com/anneharun3" target="_blank" rel="noopener">github.com/anneharun3</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container reveal-right">
+                    <form id="contact-form" class="glass-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="form-name">Name</label>
+                            <input type="text" id="form-name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email</label>
+                            <input type="email" id="form-email" required placeholder="john@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" rows="5" required placeholder="Let's build something..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                    <div id="form-success" class="form-status-message hide">
+                        <p>🎉 Message sent successfully! I'll get back to you shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Mr. Engineer. All rights reserved.</p>
+            <p class="footer-meta">Designed for optimal fluidity and systems scale.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Resume Modal -->
+    <div id="resume-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" aria-label="Close modal">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                </svg>
+            </button>
+            <div class="resume-header">
+                <h2>Resume</h2>
+                <button id="download-resume-btn" class="btn btn-secondary btn-sm">Download PDF</button>
+            </div>
+            <div class="resume-body">
+                <div class="resume-sheet">
+                    <div class="resume-sheet-header">
+                        <h1>MR. ENGINEER</h1>
+                        <p class="resume-sheet-title">Staff Software Engineer</p>
+                        <p class="resume-sheet-contact">anneharun3@gmail.com | github.com/anneharun3 | Remote, USA</p>
+                    </div>
+                    
+                    <div class="resume-sheet-section">
+                        <h3>SUMMARY OF QUALIFICATIONS</h3>
+                        <p>Staff Software Engineer with over a decade of expertise designing, building, and operating highly scalable distributed systems. Proven track record leading core architectural migrations, scaling real-time ingestion pipelines to 120k+ req/sec, and designing reliable multi-tenant Kubernetes platform environments. Experienced tech leader who guides engineering cultures through cross-team RFC reviews, mentoring, and technical vision alignment.</p>
+                    </div>
+
+                    <div class="resume-sheet-section">
+                        <h3>PROFESSIONAL EXPERIENCE</h3>
+                        <div class="resume-job">
+                            <div class="resume-job-meta">
+                                <strong>Staff Software Engineer</strong> | GlobalScale Corp
+                                <span class="resume-job-date">2022 – Present</span>
+                            </div>
+                            <ul>
+                                <li>Architected migration from monolithic Python stack to a distributed Go microservice architecture, slashing end-to-end user latencies by 35%.</li>
+                                <li>Designed and deployed an event tracking engine handling 5B+ event payloads daily using Kafka and ClickHouse with 99.999% reliability.</li>
+                                <li>Established company-wide technology RFC standards, aligning development patterns across 80+ software engineers.</li>
+                            </ul>
+                        </div>
+                        <div class="resume-job">
+                            <div class="resume-job-meta">
+                                <strong>Lead Systems Architect</strong> | CloudFlow Labs
+                                <span class="resume-job-date">2019 – 2022</span>
+                            </div>
+                            <ul>
+                                <li>Designed Kubernetes platform serving 4.5M active users, achieving zero-downtime rolling deploys.</li>
+                                <li>Consolidated cloud resource schemas using Terraform, reducing infrastructure spend by 20% ($1.2M annually).</li>
+                                <li>Built core observability pipeline combining OpenTelemetry, Prometheus, and Grafana.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="resume-sheet-section">
+                        <h3>CORE EXPERTISE</h3>
+                        <p><strong>Languages:</strong> Go, Rust, Java, C++, Shell Scripting, JavaScript (ES6+), HTML5/CSS3</p>
+                        <p><strong>Systems & Tools:</strong> Apache Kafka, Docker, Kubernetes, Terraform, Prometheus, Redis, ClickHouse, PostgreSQL, gRPC</p>
+                        <p><strong>Methodologies:</strong> Cloud-native Architecture, Distributed Systems Design, Observability, Agile/Scrum Leadership</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
