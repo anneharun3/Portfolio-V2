@@ -435,6 +435,10 @@ a {
     margin-top: 1rem;
 }
 
+.hero-actions .btn {
+    min-width: 210px;
+}
+
 .hero-scroll-indicator {
     margin-top: 3.5rem;
     display: flex;
