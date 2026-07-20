@@ -227,15 +227,19 @@ a {
 }
 
 .btn-outline {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.03);
     color: var(--text-primary);
     border: 1px solid var(--border-glass);
+    padding: 0.875rem 2.25rem;
+    backdrop-filter: blur(10px);
 }
 
 .btn-outline:hover {
+    background: rgba(99, 102, 241, 0.1);
     border-color: var(--accent-indigo);
-    color: var(--accent-indigo);
+    color: #ffffff;
     transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.2);
 }
 
 .btn-block {
@@ -424,7 +428,7 @@ a {
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.25rem;
+    gap: 1.75rem;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -432,7 +436,7 @@ a {
 }
 
 .hero-scroll-indicator {
-    margin-top: 2rem;
+    margin-top: 3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
