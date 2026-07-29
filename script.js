@@ -218,8 +218,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       6. Resume Modal Functionality
+       6. Resume Modal Functionality (Disabled in favor of direct PDF link)
        ========================================================================== */
+    /*
     const resumeBtn = document.getElementById('resume-btn');
     const mobileResumeBtn = document.getElementById('mobile-resume-btn');
     const resumeModal = document.getElementById('resume-modal');
